@@ -5,7 +5,7 @@
                http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
 
 
-	<bean id="address" class="com.learn.spring.injections.Address">
+	<bean id="address" class="com.learn.spring.injections.Address"> 
 		<constructor-arg value="hyd" type="String" />
 		<constructor-arg value="telangana" type="String" />
 		<constructor-arg value="india"></constructor-arg>
@@ -13,6 +13,12 @@
 	<bean id="studentBean" class="com.learn.spring.injections.Student">
 		<constructor-arg value="10" type="Integer" />
 		<constructor-arg value="nikhil" type="String" />
+		<constructor-arg ref="address" type="com.learn.spring.injections.Address" />
+	</bean>
+	
+	<bean id="teacherBean" class="com.learn.spring.injections.Teacher">
+		<constructor-arg value="10" type="Integer" />
+		<constructor-arg value="teacher" type="String" />
 		<constructor-arg ref="address" type="com.learn.spring.injections.Address" />
 	</bean>
 
